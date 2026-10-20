@@ -28,10 +28,9 @@ def print_report() -> dict[int, int]:
     print("\nStep distribution (iterations needed to reach 6174):")
     print(f"  {'steps':>5} | {'numbers':>8} | {'share':>7} | bar")
     print("  " + "-" * 48)
-    max_count = max(distribution.values())
     for steps, count in distribution.items():
         share = count / total_valid
-        bar = "#" * round(share * max_count / (max_count / 40))
+        bar = "#" * round(share * 40)
         print(f"  {steps:>5} | {count:>8} | {share:>6.1%} | {bar}")
     print(f"\n  max steps: {max(distribution)}, min steps: {min(distribution)}")
 

@@ -16,7 +16,10 @@ SAMPLE_SIZE = 10_000
 
 
 def _timed(fn: Callable[[], object], rounds: int) -> float:
-    """Average wall time of fn over `rounds` calls, in seconds."""
+    """Best wall time of fn over `rounds` calls, in seconds.
+
+    Best-of filters out OS scheduling jitter that inflates averages.
+    """
     best = float("inf")
     for _ in range(rounds):
         start = time.perf_counter()

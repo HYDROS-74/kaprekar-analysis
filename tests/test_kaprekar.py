@@ -25,11 +25,8 @@ class TestIterationsTo6174:
         assert iterations_to_6174(6174) == 0
 
     def test_known_path_3524(self):
-        # 3524 -> 3087 -> 0835 -> 5... well-known chain length
-        # 3524: 5432-2345=3087; 8730-0378=8352; 8352-2358=6174? no:
-        # verify via the engine itself against a hand-checked short chain:
-        steps = iterations_to_6174(3524)
-        assert 1 <= steps <= 7
+        # Hand-checked chain: 5432-2345=3087 -> 8730-0378=8352 -> 8532-2358=6174
+        assert iterations_to_6174(3524) == 3
 
     def test_all_valid_inputs_converge_within_7_steps(self):
         sweep = sweep_all()
