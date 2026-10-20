@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated output (recreated by python -m kaprekar)
+step_distribution.png
+
+# Environments
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
