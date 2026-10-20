@@ -1,4 +1,14 @@
-"""Tests for the Kaprekar analysis package."""
+"""Tests for the Kaprekar analysis package.
+
+Works under pytest from any working directory, and also when run
+directly (e.g. VS Code's "Run Python File" button).
+"""
+
+import os
+import sys
+
+# Make the project root importable regardless of how this file is launched.
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pytest
 
@@ -68,3 +78,8 @@ class TestFullSweep:
     def test_distribution_step_range(self):
         distribution = step_distribution(sweep_all())
         assert set(distribution) == {0, 1, 2, 3, 4, 5, 6, 7}  # 0 = 6174 itself
+
+
+if __name__ == "__main__":
+    # Allow direct execution (e.g. VS Code "Run Python File") to run the suite.
+    sys.exit(pytest.main([os.path.abspath(__file__), "-v"]))
