@@ -82,7 +82,14 @@ kaprekar-analysis/
 │   └── report.py       # console report + chart
 ├── tests/
 │   └── test_kaprekar.py
+├── ACKNOWLEDGEMENTS.md
 ├── README.md
 ├── .gitignore
 └── requirements.txt
 ```
+
+## Acknowledgements
+
+See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) — Claude Code was used to
+assist with debugging and documentation polish; all analysis and
+implementation decisions are the author's own.
