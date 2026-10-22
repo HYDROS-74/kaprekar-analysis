@@ -1,19 +1,27 @@
-"""Tests for the Kaprekar analysis package.
+"""Tests for the Kaprekar analysis.
 
-Works under pytest from any working directory, and also when run
-directly (e.g. VS Code's "Run Python File" button).
+Run with pytest (python -m pytest tests/ -v) or directly in VS Code.
 """
 
 import os
 import sys
 
-# Make the project root importable regardless of how this file is launched.
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Make the code folder importable regardless of how this file is launched.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "code"))
 
 import pytest
 
-from kaprekar.analysis import REPDIGIT_COUNT, TOTAL_CANDIDATES, sweep_all, step_distribution, verify_convergence
-from kaprekar.engine import KAPREKAR_CONSTANT, is_valid_input, iterations_to_6174, kaprekar_step
+from kaprekar import (
+    KAPREKAR_CONSTANT,
+    REPDIGIT_COUNT,
+    TOTAL_CANDIDATES,
+    is_valid_input,
+    iterations_to_6174,
+    kaprekar_step,
+    step_distribution,
+    sweep_all,
+    verify_convergence,
+)
 
 
 class TestKaprekarStep:

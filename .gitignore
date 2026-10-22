@@ -1,15 +1,20 @@
 # Python
 __pycache__/
-*.py[cod]
+*.pyc
+
+# Test/cache folders
 .pytest_cache/
+tests/.pytest_cache/
+.coverage
+htmlcov/
 
-# Generated output (recreated by python -m kaprekar)
-step_distribution.png
-
-# Environments
+# Virtual environments
 venv/
 .venv/
 
-# IDE
-.vscode/
-.idea/
+# Generated output
+step_distribution.png
+
+# OS junk
+Thumbs.db
+.DS_Store
